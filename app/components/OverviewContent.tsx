@@ -38,62 +38,62 @@ const OverviewContent = () => {
         const headers = ['Place', 'Level', 'Player name', 'PRT', 'Winrate%',  'Rank', 'Rank'];
         const data = [
         [1, 
-        <div className="flex items-center gap-[35px]">
+        <div className="flex items-center gap-[35px]" key="level-1">
             <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
             13
-        </div> , 'Naomi', '10,114230', <p className="text-[#01C601]">95%</p>, 
-            <div className="flex items-center gap-[15px]">
+        </div> , 'Naomi', '10,114230', <p className="text-[#01C601]" key="winrate-1">95%</p>, 
+            <div className="flex items-center gap-[15px]"  key="rank-1">
                 Pirate lord
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Naomi')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
-        [2, <div className="flex items-center gap-[35px]">
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Naomi')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]"  key="edit-1" >Edit</button>],
+        [2, <div className="flex items-center gap-[35px]" key="level-2">
                 <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
                 12
-            </div>, 'Juliet', '8,114230',<p className="text-[#01C601]">90%</p>, 
-            <div className="flex items-center gap-[15px]">
+            </div>, 'Juliet', '8,114230',<p className="text-[#01C601]"  key="winrate-2">90%</p>, 
+            <div className="flex items-center gap-[15px]" key="rank-2">
                 Ocean raider
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Juliet')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
-        [3, <div className="flex items-center gap-[35px]">
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Juliet')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]" key="edit-2">Edit</button>],
+        [3, <div className="flex items-center gap-[35px]" key="level-3">
                 <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
                 11
-            </div>, 'Jasmine', '7,114230',<p className="text-[#01C601]">80%</p>, 
-            <div className="flex items-center gap-[15px]">
+            </div>, 'Jasmine', '7,114230',<p className="text-[#01C601]" key="winrate-3">80%</p>, 
+            <div className="flex items-center gap-[15px]" key="rank-3">
                 Wealthy pirate
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Jasmine')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
-        [4, <div className="flex items-center gap-[35px]">
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Jasmine')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]" key="edit-3">Edit</button>],
+        [4, <div className="flex items-center gap-[35px]" key="level-4">
                 <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
                 10
-            </div>, 'Tariq', '6,114230',<p className="text-[#01C601]">70%</p>, 
-            <div className="flex items-center gap-[15px]">
+            </div>, 'Tariq', '6,114230',<p className="text-[#01C601]" key="winrate-4">70%</p>, 
+            <div className="flex items-center gap-[15px]" key="rank-4">
                 Sea captain
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Tariq')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
-        [5, <div className="flex items-center gap-[35px]">
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Tariq')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]"  key="edit-4">Edit</button>],
+        [5, <div className="flex items-center gap-[35px]" key="level-5">
                 <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
                 9
-            </div>, 'Kelvin', '5,114230',<p className="text-[#01C601]">60%</p>, 
-            <div className="flex items-center gap-[15px]">
+            </div>, 'Kelvin', '5,114230',<p className="text-[#01C601]" key="winrate-5">60%</p>, 
+            <div className="flex items-center gap-[15px]" key="rank-5">
                 Gold hoarder
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Kelvin')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
-        [6, <div className="flex items-center gap-[35px]">
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Kelvin')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]" key="edit-5">Edit</button>],
+        [6, <div className="flex items-center gap-[35px]" key="level-6">
                 <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
                 8
-            </div>, 'Smith', '3,114230',<p className="text-[#01C601]">65%</p>, 
-            <div className="flex items-center gap-[15px]">
+            </div>, 'Smith', '3,114230',<p className="text-[#01C601]" key="winrate-6">65%</p>, 
+            <div className="flex items-center gap-[15px]" key="rank-6">
                 Coin collector
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Smith')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
-        [7, <div className="flex items-center gap-[35px]">
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Smith')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]" key="edit-6">Edit</button>],
+        [7, <div className="flex items-center gap-[35px]" key="level-7">
                 <Image width={15.5} height={15.5} src={LevelBadge} alt="LevelBadge" />
                 7
-            </div>, 'Brain', '2,114230',<p className="text-[#01C601]">60%</p>, 
-            <div className="flex items-center gap-[15px]">
+            </div>, 'Brain', '2,114230',<p className="text-[#01C601]" key="winrate-7">60%</p>, 
+            <div className="flex items-center gap-[15px]" key="rank-7">
                 legendary gold
                 <Image src={RankCup} alt="RankCup" />
-            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Brain')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]">Edit</button>],
+            </div>, <button onClick={(e) => handleEditClick(e, 1, 'Brain')} className="w-[84.3px] h-[24px] bg-[#4DAFF2] text-white text-[11.63px] leading-[23.26px] font-normal tracking-[0.15%] rounded-[24px]"  key="edit-7">Edit</button>],
         ];
    
 

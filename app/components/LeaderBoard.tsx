@@ -24,7 +24,7 @@ const LeaderBoard = () => {
                 </div>
 
                 <p className="text-[#FFFFFF] text-[12px] leading-[24px] tracking-[0.15%] font-normal max-w-[439px]">
-                    Ahoy, matey! Welcome to Pirate Hunt, a Telegram clicker mini-game that's a treasure trove of fun and excitement on the Ton Network.
+                    Ahoy, matey! Welcome to Pirate Hunt, a Telegram clicker mini-game that&apos;s a treasure trove of fun and excitement on the Ton Network.
                 </p>
                 </div>
 

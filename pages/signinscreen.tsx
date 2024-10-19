@@ -7,7 +7,7 @@ import "../app/globals.css";
 import YourProfile from "../public/assets/YourProfile.png";
 import Link from "next/link"
 
-export default function signinscreen() {
+export default function SignInScreen() {
 
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');

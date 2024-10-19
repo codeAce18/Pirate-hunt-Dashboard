@@ -29,7 +29,7 @@ import LogOutIcon from "/public/assets/LogOutIcon.svg"
 import LogOutIconBlue from "/public/assets/LogOutIconBlue.svg"
 import OverviewContent from './OverviewContent';
 import ChartsContent from './ChartsContent';
-import NotificationContent from './NotificationContent';
+
 import WalletContent from './WalletContent';
 import AllPlayersContent from './AllPlayersContent';
 import TopPlayersContent from './TopPlayersContent';
@@ -39,13 +39,7 @@ type ContentType = 'overview' | 'charts' | 'notification' | 'wallet' | 'allPlaye
 
 const Sidebar = () => {
 
-    const [isNotificationVisible, setNotificationVisible] = useState(false);
-
-   
-
-    const closeOverlay = () => {
-        setNotificationVisible(false); // Close the overlay
-    };
+    
 
     const [isOpen, setIsOpen] = useState(true);  // Default open
     const [activeContent, setActiveContent] = useState<ContentType>('overview');  // Default content
@@ -55,9 +49,7 @@ const Sidebar = () => {
         
     };
 
-    const handleNotificationCheck = () => {
-        setNotificationVisible(true);
-    }
+   
 
     const toggleDropdown = () => {
       setIsOpen(!isOpen);
