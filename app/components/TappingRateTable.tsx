@@ -86,7 +86,7 @@ const TappingRateTable = () => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {boosts.map((boost, index) => (
+                    {boosts.map((boost) => (
                         <TableRow key={boost.id} className="border-b-[0.97px] border-b-transparent text-white">
                             <TableCell>{boost.amount}</TableCell>
                             <TableCell>{boost.rate}</TableCell>
