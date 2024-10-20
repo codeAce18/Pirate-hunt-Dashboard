@@ -19,8 +19,16 @@ import ChartsIconBlue from "/public/assets/ChartsIconBlue.svg"
 import TopPlayersIcon from "/public/assets/TopPlayersIcon.svg"
 import TopPlayersIconBlue from "/public/assets/TopPlayersIconBlue.svg"
 
-import WalletIcon from "/public/assets/WalletIcon.svg"
-import WalletIconBlue from "/public/assets/WalletIconBlue.svg"
+
+import LevelsIcon from "/public/assets/Levels.svg"
+import LevelsIconBlue from "/public/assets/LevelsBlue.svg"
+
+
+import TaskIcon from "/public/assets/task.svg"
+import TaskIconBlue from "/public/assets/taskBlue.svg"
+
+import RateIcon from "/public/assets/Rate.svg"
+import RateIconBlue from "/public/assets/RateBlue.svg"
 
 import AllPlayersIcon from "/public/assets/AllPlayersIcon.svg"
 import AllPlayersIconBlue from "/public/assets/AllPlayersIconBlue.svg"
@@ -30,12 +38,15 @@ import LogOutIconBlue from "/public/assets/LogOutIconBlue.svg"
 import OverviewContent from './OverviewContent';
 import ChartsContent from './ChartsContent';
 
-import WalletContent from './WalletContent';
+
 import AllPlayersContent from './AllPlayersContent';
 import TopPlayersContent from './TopPlayersContent';
 
+import LevelsContent from './LevelsContent';
+import TasksContent from './TasksContent';
+import TappingRateContent from './TappingRateContent';
 
-type ContentType = 'overview' | 'charts' | 'notification' | 'wallet' | 'allPlayers' | 'topPlayers';
+type ContentType = 'overview' | 'charts' | 'notification' | 'Levels' | 'Tasks' | 'tappingRate' | 'allPlayers' | 'topPlayers';
 
 const Sidebar = () => {
 
@@ -170,23 +181,69 @@ const Sidebar = () => {
                                 </div> */}
                                 <div className="pt-[20px]">
                                 <div
-                                        className={`flex items-center ${activeContent === 'wallet' ? 'bg-white rounded-[8px] p-[16px] w-[260px] mx-auto' : 'hover:bg-white rounded-[8px] mx-auto w-[260px] p-[16px]'} cursor-pointer  justify-start px-10 gap-[10px] group`}
-                                        onClick={() => handleContentChange('wallet')}
+                                        className={`flex items-center ${activeContent === 'Levels' ? 'bg-white rounded-[8px] p-[16px] w-[260px] mx-auto' : 'hover:bg-white rounded-[8px] mx-auto w-[260px] p-[16px]'} cursor-pointer  justify-start px-10 gap-[10px] group`}
+                                        onClick={() => handleContentChange('Levels')}
                                     >
                                         <div className="relative">
                                             <Image
-                                                src={WalletIcon}
-                                                alt="WalletIcon"
-                                                className={`group-hover:opacity-0 transition-opacity duration-300 ${activeContent === 'wallet' ? 'opacity-0' : ''}`}
+                                                src={LevelsIcon}
+                                                alt="LevelsIcon"
+                                                className={`group-hover:opacity-0 transition-opacity duration-300 ${activeContent === 'Levels' ? 'opacity-0' : ''}`}
                                             />
                                             <Image
-                                                src={WalletIconBlue}
-                                                alt="WalletIconBlue"
-                                                className={`absolute top-0 left-0 transition-opacity duration-300 ${activeContent === 'wallet' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                                                src={LevelsIconBlue}
+                                                alt="LevelsIconBlue"
+                                                className={`absolute top-0 left-0 transition-opacity duration-300 ${activeContent === 'Levels' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
                                             />
                                         </div>
-                                        <h1 className={`text-[16px] leading-[19.36px] font-medium ${activeContent === 'wallet' ? 'text-[#00A6DE]' : 'text-white group-hover:text-[#00A6DE]'} transition-colors duration-300`}>
-                                            Wallet
+                                        <h1 className={`text-[16px] leading-[19.36px] font-medium ${activeContent === 'Levels' ? 'text-[#00A6DE]' : 'text-white group-hover:text-[#00A6DE]'} transition-colors duration-300`}>
+                                            Levels
+                                        </h1>
+                                    </div>
+                                </div>
+
+                                <div className="pt-[20px]">
+                                <div
+                                        className={`flex items-center ${activeContent === 'Tasks' ? 'bg-white rounded-[8px] p-[16px] w-[260px] mx-auto' : 'hover:bg-white rounded-[8px] mx-auto w-[260px] p-[16px]'} cursor-pointer  justify-start px-10 gap-[10px] group`}
+                                        onClick={() => handleContentChange('Tasks')}
+                                    >
+                                        <div className="relative">
+                                            <Image
+                                                src={TaskIcon}
+                                                alt="TaskIcon"
+                                                className={`group-hover:opacity-0 transition-opacity duration-300 ${activeContent === 'Tasks' ? 'opacity-0' : ''}`}
+                                            />
+                                            <Image
+                                                src={TaskIconBlue}
+                                                alt="TaskIconBlue"
+                                                className={`absolute top-0 left-0 transition-opacity duration-300 ${activeContent === 'Tasks' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                                            />
+                                        </div>
+                                        <h1 className={`text-[16px] leading-[19.36px] font-medium ${activeContent === 'Tasks' ? 'text-[#00A6DE]' : 'text-white group-hover:text-[#00A6DE]'} transition-colors duration-300`}>
+                                            Tasks
+                                        </h1>
+                                    </div>
+                                </div>
+
+                                <div className="pt-[20px]">
+                                <div
+                                        className={`flex items-center ${activeContent === 'tappingRate' ? 'bg-white rounded-[8px] p-[16px] w-[260px] mx-auto' : 'hover:bg-white rounded-[8px] mx-auto w-[260px] p-[16px]'} cursor-pointer  justify-start px-10 gap-[10px] group`}
+                                        onClick={() => handleContentChange('tappingRate')}
+                                    >
+                                        <div className="relative">
+                                            <Image
+                                                src={RateIcon}
+                                                alt="RateIcon"
+                                                className={`group-hover:opacity-0 transition-opacity duration-300 ${activeContent === 'tappingRate' ? 'opacity-0' : ''}`}
+                                            />
+                                            <Image
+                                                src={RateIconBlue}
+                                                alt="RateIconBlue"
+                                                className={`absolute top-0 left-0 transition-opacity duration-300 ${activeContent === 'tappingRate' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                                            />
+                                        </div>
+                                        <h1 className={`text-[16px] leading-[19.36px] font-medium ${activeContent === 'tappingRate' ? 'text-[#00A6DE]' : 'text-white group-hover:text-[#00A6DE]'} transition-colors duration-300`}>
+                                            Tapping Rate
                                         </h1>
                                     </div>
                                 </div>
@@ -267,7 +324,9 @@ const Sidebar = () => {
                     {activeContent === 'overview' && <OverviewContent />}
                     {activeContent === 'charts' && <ChartsContent />}
                     {/* {activeContent === 'notification' && <NotificationContent />} */}
-                    {activeContent === 'wallet' && <WalletContent />}
+                    {activeContent === 'Levels' && <LevelsContent />}
+                    {activeContent === 'Tasks' && <TasksContent />}
+                    {activeContent === 'tappingRate' && <TappingRateContent />}
                     {activeContent === 'allPlayers' && <AllPlayersContent />}
                     {activeContent === 'topPlayers' && <TopPlayersContent />}
                     {/* Add more conditional rendering for other components */}
